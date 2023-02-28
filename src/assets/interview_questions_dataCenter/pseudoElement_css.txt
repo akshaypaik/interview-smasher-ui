@@ -1,0 +1,17 @@
+A CSS pseudo-element is used to style specified parts of an element.
+<br/>
+For example, it can be used to:
+<br/>
+Style the first letter, or line, of an element
+<br/>
+Insert content before, or after, the content of an element
+<br/>
+Syntax:
+<br/>
+The syntax of pseudo-elements:
+<br/>
+selector::pseudo-element {
+<br/>  
+property: value;
+<br/>
+}

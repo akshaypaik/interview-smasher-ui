@@ -1,0 +1,70 @@
+<div class="lb-bg-left-top lb-mid-pad lb-none-v-margin lb-grid headerHome"
+    style="background-color:#1e2832; background-image:url('//d1.awsstatic.com/Marketplace/solutions-center/banners/awsmp-banner-reinvent-squid.f39171d6845ea0c8146f2b21439dd30f45a585ad.png');">
+    <div class="lb-row lb-row-max-large lb-snap">
+        <div class="lb-col lb-tiny-24 lb-mid-24">
+            <h1 id="AWS_Blog" class="lb-txt-none lb-txt-white lb-h1-large lb-title"> Interview Questions</h1>
+            <br />
+            <h3 id="Get_the_latest_news_about_AWS_launches.2C_events.2C_and_more."
+                class="lb-txt-light lb-txt-none lb-txt-white lb-txt-20 lb-h2 lb-title"> Get the dream job you deserve!
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top: 3%;">
+    <div class="row col-sm-12">
+        <div class="col-sm-3">
+            <strong>Category or format</strong>
+            <br/>
+            <span class="clearAllStyle" (click)="onClearAll()">Clear all</span>
+            <br/>
+            <div style="margin-top: 3%;">
+                <strong>Category</strong>
+                <div *ngFor="let categoryOps of categoryList" class="categoryOpsList lb-checkbox">
+                    <span>
+                        <input type="checkbox" id="{{categoryOps}}" value="{{categoryOps}}" name="{{categoryOps}}" data-key="category"
+                        (click)="onCategorySelect($event)"/>
+                        <label for="{{categoryOps}}">{{categoryOps}}</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div role="search" class="lb-none-v-margin m-directories-search" style="margin-bottom:10px;"
+                data-search-scope="blog-posts" data-ui-scope="filtered-posts" data-lb-comp="directories-search"
+                data-lb-comp-registered="true">
+                <input role="searchbox" aria-label="Search" type="text" autocomplete="off" placeholder="Search questions..."
+                    wfd-id="id55" style="width: 100%;" [(ngModel)] = "searchTerm"/>
+                <span tabindex="0" class="m-hidden" aria-label="Clear Searchbox" role="button"></span>
+            </div>
+            <div *ngIf="displayNoRecords">
+                <strong>No questions found!</strong>
+            </div>
+            <div class="questionCountStyle">
+                <strong>Questions - <span class="questionNumberStyle">{{interviewQuestionCount}}</span></strong>
+            </div>
+            <div *ngFor="let questions of interviewQuestionsDetails | searchInterviewQuestions : searchTerm" style="margin-top: 3%;">
+                <div class="surface-card">
+                    <div class="row col-sm-12 titleHeader" (click)="onClickTitle(questions)">
+                        <strong>{{questions.title}}</strong>
+                    </div>
+                    <div class="font-medium text-500 mb-3">
+                        <span style="color: grey;">
+                            {{questions.company_asked}}, {{questions.date}}
+                        </span>
+                        <br/>
+                        <!-- <span [ngClass]="showMoreText ? 'contentStyleShow' : 'contentStyleHide'" id="{{questions._id}}">
+                            {{questions.content}}
+                        </span> -->
+                        <span class="contentStyleHide" id="{{questions._id}}">
+                            {{questions.content}}
+                        </span> 
+                        <br/>
+                        <span class="moreStyle" id="{{questions._id}}" (click)="onClickMore(questions._id)" *ngIf="!showMoreText">[More...]</span>
+                        <span class="moreStyle" id="{{questions._id}}" (click)="onClickLess(questions._id)" *ngIf="showMoreText">[Less...]</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

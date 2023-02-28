@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-global-header',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlobalHeaderComponent implements OnInit {
 
-  constructor() { }
+  userActivity: any;
+  userInactive: Subject<any> = new Subject();
+
+  constructor() {
+    this.setTimeout();
+    //this.userInactive.subscribe(() => prompt('user has been inactive for 3s'));
+  }
 
   ngOnInit(): void {
+    
+  }
+
+  setTimeout() {
+    this.userActivity = setTimeout(() => this.userInactive.next(undefined), 3000);
+  }
+
+  @HostListener('window:mousemove') refreshUserState() {
+    clearTimeout(this.userActivity);
+    this.setTimeout();
   }
 
 }

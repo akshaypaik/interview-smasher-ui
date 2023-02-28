@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "1",
+        "title": "Destructuring Assignment in JavaScript",
+        "content": "",
+        "content_url": "../../assets/interview_questions_dataCenter/destructuring_js.txt",
+        "category": "Javascript",
+        "company_asked": "others",
+        "date": "25/02/2023",
+        "reference_url": "https://www.geeksforgeeks.org/destructuring-assignment-in-javascript/"
+    },
+    {
+        "_id": "2",
+        "title": "Prototype in JavaScript",
+        "content": "",
+        "content_url": "../../assets/interview_questions_dataCenter/prototype_js.txt",
+        "category": "Angular",
+        "company_asked": "others",
+        "date": "28/02/2023",
+        "reference_url": "https://www.geeksforgeeks.org/prototype-in-javascript/"
+    },
+    {
+        "_id": "3",
+        "title": "Pseudo Elements in CSS",
+        "content": "",
+        "content_url": "../../assets/interview_questions_dataCenter/pseudoElement_css.txt",
+        "category": "CSS",
+        "company_asked": "others",
+        "date": "28/02/2023",
+        "reference_url": "https://www.w3schools.com/css/css_pseudo_elements.asp"
+    }
+]
