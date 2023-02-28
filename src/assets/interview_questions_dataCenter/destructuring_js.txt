@@ -1,0 +1,28 @@
+Destructuring Assignment is a JavaScript expression that allows to unpack values from arrays, or properties from 
+        objects, into distinct variables data can be extracted from arrays, objects, nested objects and assigning to variables. 
+        In Destructuring Assignment on the left-hand side defined that which value should be unpacked from the sourced variable. 
+        <br/>
+        In general way implementation of the extraction of the array is as shown below:
+        <br/>
+        Example:
+        <br/>
+        var names = ['alpha', 'beta', 'gamma', 'delta'];
+        <br/>
+        var firstName = names[0];
+        <br/>
+        var secondName = names[1];
+        <br/>
+        console.log(firstName);//'alpha'
+        <br/>
+        console.log(secondName);//'beta'
+        Syntax:
+        <br/>
+        <strong>Array destructuring:</strong>
+        <br/>
+        var x, y;
+        <br/>
+        [x, y] = [10, 20];
+        <br/>
+        console.log(x); // 10
+        <br/>
+        console.log(y); // 20

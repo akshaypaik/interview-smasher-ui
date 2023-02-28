@@ -1,0 +1,68 @@
+.headerHome {
+    padding: 3%;
+}
+
+h1,
+h3 {
+    color: white;
+}
+
+.clearAllStyle {
+    color: blue;
+    cursor: pointer;
+}
+
+.clearAllStyle:hover {
+    color: grey;
+}
+
+.categoryOpsList label {
+    margin-left: 2%;
+}
+
+.titleHeader {
+    color: blue;
+    cursor: pointer;
+}
+
+.titleHeader:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.contentStyleHide {
+    font-size: 0.8rem;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+label {
+    cursor: pointer;
+}
+
+.questionCountStyle::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+.questionNumberStyle {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+.contentStyleShow {
+    overflow: visible;
+    height: auto;
+}
+
+.moreStyle {
+    color: blue;
+    cursor: pointer;
+}
+
+.moreStyle:hover {
+    color: black;
+}
